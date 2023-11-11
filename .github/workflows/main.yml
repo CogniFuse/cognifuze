@@ -14,10 +14,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 16.x
+          node-version: 21.x
 
       - name: Install
-        run: npm i
+        run: rm -rf node_modules/ && rm -rf package-lock.json && npm install
 
       - name: Build
         run: npm run build
