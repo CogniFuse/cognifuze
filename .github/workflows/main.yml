@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: npm run build # Add whatever you need to build your package here
+      - run: npm install -g @angular/cli@latest && npm install --legacy-peer-deps
       - uses: kategengler/put-built-npm-package-contents-on-branch@v1.0.0
         with:
           branch: build
