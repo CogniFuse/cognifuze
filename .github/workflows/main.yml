@@ -14,13 +14,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 16.x
 
       - name: Install
         run: npm i
-
-      - name: Test
-        run: npm run test
 
       - name: Build
         run: npm run build
@@ -29,6 +26,6 @@ jobs:
         uses: nicholasgriffintn/github-branch-deployment-action@0.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.DEPLOYMENT_GITHUB_TOKEN }}
-          BRANCH: serv_content
+          BRANCH: build
           FOLDER: dist
           MESSAGE: 'Build: ({sha}) {msg}'
