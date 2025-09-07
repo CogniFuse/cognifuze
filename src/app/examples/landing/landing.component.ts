@@ -14,8 +14,4 @@ export class LandingComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {}
-
-  openInNewTab() {
-    this.router.navigate(['/policies'], { queryParams: { newTab: 'true' } });
-  }
 }

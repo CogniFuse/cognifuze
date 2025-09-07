@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { LandingComponent } from './landing/landing.component';
-import { PoliciesComponent } from './policies/policies.component';
 
 @NgModule({
     imports: [
@@ -14,7 +13,6 @@ import { PoliciesComponent } from './policies/policies.component';
     ],
     declarations: [
         LandingComponent,
-        PoliciesComponent
     ]
 })
 export class ExamplesModule { }
